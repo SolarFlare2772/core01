@@ -1,0 +1,165 @@
+body{
+    margin:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #111827,
+        #05070a 70%
+    );
+
+    color:white;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+}
+
+.card{
+
+    position:relative;
+    overflow:hidden;
+
+    width:280px;
+
+    text-align:center;
+
+    padding:32px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.02)
+    );
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 30px rgba(255,255,255,0.05),
+        inset 0 0 20px rgba(255,255,255,0.03);
+
+    animation:
+        boot 0.8s ease-out;
+}
+
+.core{
+
+    font-size:11px;
+
+    letter-spacing:6px;
+
+    color:#c7d3e8;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.4);
+}
+
+.symbol{
+
+    font-size:64px;
+
+    margin:20px 0;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,.5);
+}
+
+.message{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+}
+
+.moonage{
+
+    font-size:14px;
+
+    color:#9ca3af;
+
+    letter-spacing:2px;
+}
+
+.status{
+
+    margin-top:25px;
+
+    font-size:11px;
+
+    color:#6d7785;
+
+    letter-spacing:3px;
+
+    animation:
+        blink 2s infinite;
+}
+
+.scanline{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:2px;
+
+    background:
+        rgba(255,255,255,.25);
+
+    animation:
+        scan 4s linear infinite;
+}
+
+/* ふわっと感*/
+@keyframes boot{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes blink{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.3;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes scan{
+
+    from{
+        top:0;
+    }
+
+    to{
+        top:100%;
+    }
+}

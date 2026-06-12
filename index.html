@@ -1,102 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
-  
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CORE-01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORE-MOON</title>
 
-  <style>
-
-body{
-    margin:0;
-    background:#05070a;
-    color:#ffffff;
-    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-.card{
-    width:280px;
-
-    background:
-    linear-gradient(
-        180deg,
-        rgba(255,255,255,0.08),
-        rgba(255,255,255,0.02)
-    );
-
-    border:1px solid rgba(255,255,255,0.15);
-
-    border-radius:24px;
-
-    padding:30px;
-
-    backdrop-filter:blur(20px);
-
-    box-shadow:
-    0 0 30px rgba(255,255,255,0.05),
-    inset 0 0 20px rgba(255,255,255,0.03);
-
-    text-align:center;
-}
-
-.core{
-    font-size:11px;
-    letter-spacing:6px;
-    color:#7c8ca3;
-}
-
-.symbol{
-    font-size:60px;
-    margin:20px 0;
-}
-
-.message{
-    font-size:22px;
-    line-height:1.5;
-}
-
-.status{
-    margin-top:20px;
-    font-size:11px;
-    color:#6d7785;
-    letter-spacing:2px;
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-  
 <body>
-  
-<div class="card">
-  <div class="core">CORE-01</div>
-  <div class="symbol">◉</div>
-  <div id="message" class="message">LOADING</div>
-  <div class="status">SYSTEM ONLINE</div>
-</div>
 
-<script>
-  const data = 
-    [
-      "今日はもう十分頑張った",
-      "水飲んだ？",
-      "☾ 満月まであと3日",
-      "ラッキーアイテム：イヤホン",
-      "今日の一曲：晴る",
-      "散歩すると良い発見あり",
-      "夜更かし注意"
-    ];
-  
-  const random =
-  data[Math.floor(Math.random()*data.length)];
-  
-  document.getElementById("message").innerText = random;
-</script>
+    <div class="card">
+
+        <div class="scanline"></div>
+
+        <div class="core">
+            CORE-MOON
+        </div>
+
+        <div id="symbol" class="symbol">
+            ◉
+        </div>
+
+        <div id="message" class="message">
+            LOADING...
+        </div>
+
+        <div id="moonage" class="moonage">
+            --
+        </div>
+
+        <div class="status">
+            SYSTEM ONLINE
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
