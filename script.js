@@ -1,7 +1,7 @@
 const today = new Date();
 
 const knownNewMoon =
-new Date("2024-01-11");
+new Date("2026-05-31");
 
 const days =
 (today - knownNewMoon) /
